@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Pencil Sketch</title>
+    <link rel = "stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home" style="color:black;">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <img class="icon" src="{{url_for('static',filename='photos/img.png')}}">
+    </div>
+    <div class="main" id="home">
+    <h1>Image to Pencil Sketch </h1>
+    <p>Create pencil sketch drawing from any pictures. Convert your portrait photos to stunning caricature and cartoon avatars, based on AI technology.</p>
+    </div>
+    <div class="border">
+        <p><b>----------</b> Free Online Tool <b>----------</b></p>
+    </div>
+    <div class="main">
+    	<form action="{{url_for('upload')}}" method="post"  enctype="multipart/form-data">
+    	<input type="file" name="image">
+        <button  type="submit" class="butt">Upload Image</button>
+        </form>
+    </div>
+    <div class="pic">
+        <img id="image" src="{{url_for('static',filename='photos/image.jpeg')}}">
+        <img id="sketch" src="{{url_for('static',filename='photos/sketch.jpeg')}}">
+    </div>
+    
+    <div class="border" id="about">
+        <p><b>----------</b> What we do <b>----------</b></p>
+    </div>
+    <div class="section_top">
+        <div  class="section" id="section1">
+            <h3>Pencil sketch your photo</h3>
+            <p>It's a online tool, where uploaded photo is converted into pencil sketch in just a minute.</p>
+        </div>
+        <div  class="section" id="section2">
+            <h3>How this tool working?</h3>
+            <p>For making photo to pencil sketch, first step is to upload the photo to web server and then click on the download button to get a pencil sketch photo.</p>
+        </div>
+        <div  class="section" id="section3">
+            <h3>Is it free tool</h3>
+            <p>Our tool is completely free to use. It is a full version, no hidden payments, no signup required, no demo versions and no other limitations. You can draw pencil sketch on your photo, without any restrictions.</p>
+        </div>
+    </div>
+    <div class="section_bottom">
+        <div  class="section" id="section4">
+            <h3>Are my images secured?</h3>
+            <p>We use user sessions to make a directory under temp folder in server. your photo is uploaded under the complex file path and it is deleted once the queue is filled in server.</p>
+        </div>
+        <div  class="section" id="section5">
+            <h3>Simple to use</h3>
+            <p>Simple tool, No special skills are required to convert your photo to pencil sketch with our tool, just Upload your photo, and click "download" button to process. Once the process completed, you can preview your pencil sketched photo.</p>
+        </div>
+        <div  class="section" id="section6">
+            <h3>Server side process</h3>
+            <p>We used server side scripts to convert photo to pencil sketch, because its quite easier to apply set of process while drawing pencil sketch image. </p>
+        </div>
+    </div>
+    <div class="border" id="contact">
+        <p><b>----------</b> Contact us<b>----------</b></p>
+    </div>
+    <div class="social">
+        <div><a href="https://www.linkedin.com/in/ishita-jain-564211225/"><img src="{{url_for('static',filename='photos/linkedin.png')}}"></a> </div>
+        <div><a href="https://github.com/ishita126jain"><img src="{{url_for('static',filename='photos/github.png')}}"> </a></div>
+        <div><a href="https://www.instagram.com/ishita22jain_/"><img src="{{url_for('static',filename='photos/instagram.jpeg')}}"> </a></div>
+    </div>
+</body>
+</html>
